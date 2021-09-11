@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity{
     private Fragment selectedFragment  = null;
     private boolean loggedIn = true;
 //    private boolean loggedIn = false;
-
+//testing push
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
