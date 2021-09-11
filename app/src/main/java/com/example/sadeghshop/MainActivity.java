@@ -32,14 +32,15 @@ import com.google.android.material.navigation.NavigationView;
 //            }
 //        });
 
+
 public class MainActivity extends AppCompatActivity{
 
     private DrawerLayout drawerLayout;
     private ActionBarDrawerToggle actionBarDrawerToggle;
     private Fragment selectedFragment  = null;
-    private boolean loggedIn = true;
-//    private boolean loggedIn = false;
-//testing push
+   // private boolean loggedIn = true;
+    private boolean loggedIn = false;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
