@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/design_default_color_primary"
+    android:elevation="4dp"
+    android:layoutDirection="rtl">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/search_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            app:icon="@drawable/ic_baseline_search_24"
+            android:layoutDirection="rtl"
+            android:layout_gravity="end"/>
+
+</androidx.appcompat.widget.Toolbar>

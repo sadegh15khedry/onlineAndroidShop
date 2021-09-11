@@ -1,0 +1,55 @@
+<resources>
+    <string name="app_name">فروشگاه آنلاین صادق</string>
+    <string name="account_nav_title">حساب کاربری</string>
+    <string name="home_nav_title">صفحه اصلی</string>
+    <string name="categories_nav_title">دسته بندی ها</string>
+    <string name="cart_nav_title">سبد خرید</string>
+    <string name="settings_nav">تنظیمات</string>
+    <string name="about_nav">درباره ی ما</string>
+    <string name="exit_nav">خروج</string>
+    <string name="home_text_random_filler">صفحه اصلی</string>
+    <string name="open_actionbar">open</string>
+    <string name="close_actionbar">close</string>
+    <string name="action_toggle_bar">action_toggle_bar</string>
+    <string name="search_title">search</string>
+    <string name="title_activity_main2">MainActivity2</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="my_button">my Button</string>
+    <string name="home_fragment">home fragment</string>
+    <string name="categories_fragment">categories fragment</string>
+    <string name="profile_fragment">profile fragment</string>
+    <string name="cart_fragment">cart fragment</string>
+    <string name="about_text">این اپیلیکیشن به عنوان یک پروژه ی آزمایشی توسط صادق خدری پیاده سازی شده است.</string>
+    <string name="cart_text">برای استفاده از سبد خرید ابتدا ثبت نام کنید.</string>
+    <string name="profile_full_name">هومر سیمسون</string>
+    <string name="profile_id"> &#64;HomerSimpsons </string>
+    <string name="profile_email">homer_simpson@gmail.com</string>
+    <string name="profile_phone">09175552424</string>
+    <string name="profile_address">بوشهر خیابان سنگی کوچه ی گلخونه ساختمان دوم سمت راست واحد 1</string>
+    <string name="profile_balance">125000000</string>
+    <string name="edit_profile_btn">ویرایش حساب کاربری</string>
+    <string name="login_title">ورود</string>
+    <string name="email_hint">ایمیل</string>
+    <string name="login_btn">ورود</string>
+    <string name="password_hint">رمزعبور</string>
+    <string name="password_recovery_btn">بازیابی رمز عبور</string>
+    <string name="login_signup_btn">ثبت نام</string>
+    <string name="title_activity_signup">SignupActivity</string>
+    <string name="signup_btn">ثبت نام</string>
+    <string name="signup_title">ثبت نام</string>
+    <string name="signup_to_login_btn">وارد شوید</string>
+    <string name="signup_to_login_des">اکانت دارید؟؟</string>
+    <string name="confirm_password_hint">تکرار رمز عبور</string>
+    <string name="signup_name_hint">نام و نام خانوادگی</string>
+    <string name="signup_phone_hint">شماره موبایل</string>
+    <string name="signup_address_hint">آدرس</string>
+    <string name="signup_postal_code_hint">کد پستی</string>
+    <string name="login_to_signup_des">اکانت ندارید؟؟</string>
+</resources>
