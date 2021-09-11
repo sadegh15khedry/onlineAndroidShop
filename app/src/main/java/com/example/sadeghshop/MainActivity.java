@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 
 
 import androidx.annotation.NonNull;
@@ -13,6 +15,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
@@ -73,6 +76,20 @@ public class MainActivity extends AppCompatActivity{
         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                 new HomeFragment()).commit();
         bottomNavigationView.setSelectedItemId(R.id.nav_home);
+
+
+
+
+//        String[] items = {"sdf","kldjfas"};
+//        ArrayAdapter<String> adapter = new ArrayAdapter<String> (this,
+//                android.R.layout.simple_list_item_1,
+//                android.R.id.text1,
+//                items);
+//        ListView view = findViewById(R.id.recycler_view);
+//        view.setAdapter(adapter);
+
+
+
 
     }
 
