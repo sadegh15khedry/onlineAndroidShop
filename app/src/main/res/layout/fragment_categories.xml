@@ -6,17 +6,21 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_centerInParent="true"
         android:text="@string/categories_fragment"
-        android:textSize="35sp"
-        android:layout_centerInParent="true">
-        <androidx.core.widget.NestedScrollView
+        android:textSize="35sp">
+        <!--        <androidx.core.widget.NestedScrollView-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="match_parent">-->
+        <!--            <view class="androidx.appcompat.app.AlertController$RecycleListView"-->
+        <!--                android:layout_width="match_parent"-->
+        <!--                android:layout_height="match_parent">-->
+        <view
+            class="androidx.appcompat.app.AlertController$RecycleListView"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-            <view class="androidx.appcompat.app.AlertController$RecycleListView"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
+            android:layout_height="wrap_content" />
 
-            </view>
-        </androidx.core.widget.NestedScrollView>
+        <!--            </view>-->
+        <!--        </androidx.core.widget.NestedScrollView>-->
     </RelativeLayout>
 </RelativeLayout>
