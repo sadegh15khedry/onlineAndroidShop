@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="results_titles">
+        <item>هدفون</item>
+        <item>هدفون</item>
+        <item>هدفون</item>
+    </string-array>
+
+    <string-array name="results_prices">
+        <item>2000</item>
+        <item>2000</item>
+        <item>2000</item>
+    </string-array>
+</resources>

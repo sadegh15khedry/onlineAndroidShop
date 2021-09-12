@@ -44,7 +44,7 @@ public class CategoriesAdapter extends RecyclerView.Adapter<CategoriesAdapter.Ca
 
         public CategoriesViewHolder(@NonNull View itemView) {
             super(itemView);
-            myCategory = itemView.findViewById(R.id.categoriesItem);
+            myCategory = itemView.findViewById(R.id.categories_item);
         }
     }
 }

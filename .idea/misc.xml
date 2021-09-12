@@ -29,8 +29,11 @@
         <entry key="..\:/Users/sadeg/AndroidStudioProjects/sadeghshop/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.16944444444444445" />
         <entry key="..\:/Users/sadeg/AndroidStudioProjects/sadeghshop/app/src/main/res/drawable/ic_baseline_android_24.xml" value="0.16944444444444445" />
         <entry key="..\:/Users/sadeg/AndroidStudioProjects/sadeghshop/app/src/main/res/drawable/ic_baseline_search_24.xml" value="0.16944444444444445" />
+        <entry key="..\:/Users/sadeg/AndroidStudioProjects/sadeghshop/app/src/main/res/layout/activity_items_list.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/sadeg/AndroidStudioProjects/sadeghshop/app/src/main/res/layout/activity_login.xml" value="0.1" />
         <entry key="..\:/Users/sadeg/AndroidStudioProjects/sadeghshop/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/sadeg/AndroidStudioProjects/sadeghshop/app/src/main/res/layout/activity_resualts.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/sadeg/AndroidStudioProjects/sadeghshop/app/src/main/res/layout/activity_results.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/sadeg/AndroidStudioProjects/sadeghshop/app/src/main/res/layout/activity_signup.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/sadeg/AndroidStudioProjects/sadeghshop/app/src/main/res/layout/cat_item.xml" value="0.23854166666666668" />
         <entry key="..\:/Users/sadeg/AndroidStudioProjects/sadeghshop/app/src/main/res/layout/categorie_item.xml" value="0.25416666666666665" />
@@ -39,6 +42,9 @@
         <entry key="..\:/Users/sadeg/AndroidStudioProjects/sadeghshop/app/src/main/res/layout/fragment_cart.xml" value="0.1" />
         <entry key="..\:/Users/sadeg/AndroidStudioProjects/sadeghshop/app/src/main/res/layout/fragment_categories.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/sadeg/AndroidStudioProjects/sadeghshop/app/src/main/res/layout/fragment_home.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/sadeg/AndroidStudioProjects/sadeghshop/app/src/main/res/layout/row_categories.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/sadeg/AndroidStudioProjects/sadeghshop/app/src/main/res/layout/row_items_list.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/sadeg/AndroidStudioProjects/sadeghshop/app/src/main/res/layout/row_results.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/sadeg/AndroidStudioProjects/sadeghshop/app/src/main/res/layout/toolbar.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/sadeg/AndroidStudioProjects/sadeghshop/app/src/main/res/menu/bottom_nav_menu.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/sadeg/AndroidStudioProjects/sadeghshop/app/src/main/res/menu/side_nav.xml" value="0.25416666666666665" />
