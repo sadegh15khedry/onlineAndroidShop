@@ -34,7 +34,7 @@ public class CategoriesFragment extends Fragment {
         CategoriesAdapter adapter = new CategoriesAdapter(getContext(), categories);
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
-        RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getContext());
+        //RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getContext());
 
 
         super.onResume();

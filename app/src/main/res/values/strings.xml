@@ -52,4 +52,9 @@
     <string name="signup_address_hint">آدرس</string>
     <string name="signup_postal_code_hint">کد پستی</string>
     <string name="login_to_signup_des">اکانت ندارید؟؟</string>
+    <string name="first_row_title">دسته اول</string>
+    <string name="home_first_see_more">نمایش همه</string>
+    <string name="home_item_short_description">لبتاب خوب ایسوس</string>
+    <string name="second_row_title">دسته دوم</string>
+    <string name="third_row_title">دسته سوم</string>
 </resources>
