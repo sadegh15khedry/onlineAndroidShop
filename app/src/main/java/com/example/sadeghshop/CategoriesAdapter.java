@@ -13,16 +13,17 @@ public class CategoriesAdapter extends RecyclerView.Adapter<CategoriesAdapter.Ca
     private String[] categories;
     private Context context;
 
-    public CategoriesAdapter (Context context , String[] categories ){
+    public CategoriesAdapter(Context context, String[] categories) {
         this.context = context;
         this.categories = categories;
 
     }
+
     @NonNull
     @Override
     public CategoriesViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(context);
-        View view = inflater.inflate(R.layout.categories_row, parent ,false);
+        View view = inflater.inflate(R.layout.row_categories, parent, false);
         return new CategoriesViewHolder(view);
 
     }
@@ -33,7 +34,6 @@ public class CategoriesAdapter extends RecyclerView.Adapter<CategoriesAdapter.Ca
     }
 
 
-
     @Override
     public int getItemCount() {
         return categories.length;
@@ -41,7 +41,8 @@ public class CategoriesAdapter extends RecyclerView.Adapter<CategoriesAdapter.Ca
 
     public class CategoriesViewHolder extends RecyclerView.ViewHolder {
         TextView myCategory;
-        public CategoriesViewHolder(@NonNull View itemView){
+
+        public CategoriesViewHolder(@NonNull View itemView) {
             super(itemView);
             myCategory = itemView.findViewById(R.id.categoriesItem);
         }

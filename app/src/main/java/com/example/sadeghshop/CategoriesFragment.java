@@ -23,35 +23,19 @@ public class CategoriesFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
-
-//        RecyclerView recyclerView = getView().findViewById(R.id.recycler_view);
-//        RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getContext());
-//        recyclerView.setAdapter(adapter);
-//        recyclerView.setLayoutManager(mLayoutManager);
-
         return inflater.inflate(R.layout.fragment_categories, container, false);
     }
 
     @Override
     public void onResume() {
-//        String[] items = {"sdf",""};
-//        ArrayAdapter<String> adapter = new ArrayAdapter<String> (getContext(),
-//                android.R.layout.simple_list_item_1,
-//                android.R.id.text1,
-//                items);
-//        ListView view = getView().findViewById(R.id.recycler_view);
-//        view.setAdapter(adapter);
-
 
         String[] categories = getResources().getStringArray(R.array.categoriesValues);
         recyclerView = getView().findViewById(R.id.recycler_view);
-        CategoriesAdapter adapter = new CategoriesAdapter(getContext(), categories );
+        CategoriesAdapter adapter = new CategoriesAdapter(getContext(), categories);
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getContext());
 
-//        recyclerView.setAdapter(adapter);
-//        recyclerView.setLayoutManager(mLayoutManager);
 
         super.onResume();
     }
