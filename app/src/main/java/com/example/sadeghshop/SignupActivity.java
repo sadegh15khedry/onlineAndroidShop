@@ -52,6 +52,7 @@ public class SignupActivity extends AppCompatActivity {
             }
         });
     }
+
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         //drawer btn stuff
         if (item != null && item.getItemId() == android.R.id.home) {

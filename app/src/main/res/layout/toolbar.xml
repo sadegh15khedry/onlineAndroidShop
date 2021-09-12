@@ -14,17 +14,17 @@
         android:id="@+id/search_input_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:endIconMode="custom"
+        android:layout_marginEnd="10dp"
         app:endIconDrawable="@drawable/ic_baseline_search_24"
-        android:layout_marginLeft="10dp">
+        app:endIconMode="custom">
 
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@color/searchbar_background_color"
-            android:textSize="18sp"
-            android:maxLines="1"/>
+            android:maxLines="1"
+            android:textSize="18sp" />
 
     </com.google.android.material.textfield.TextInputLayout>
 

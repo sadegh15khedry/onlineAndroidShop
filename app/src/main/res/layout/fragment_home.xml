@@ -2,499 +2,501 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-<androidx.core.widget.NestedScrollView
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    <LinearLayout
+
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:layout_marginBottom="80dp">
+        android:layout_height="match_parent">
 
-
-    <!--  header image  -->
-    <ImageView
-        android:id="@+id/home_wallpaper"
-        android:layout_width="fill_parent"
-        android:layout_height="250dp"
-        android:layout_marginBottom="30dp"
-        android:scaleType="fitXY"
-        android:src="@drawable/wallpaper" />
-
-
-    <!-- first row -->
-    <LinearLayout
-        android:id="@+id/first_row_wrapper"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_marginBottom="40dp">
-
-        <RelativeLayout
-            android:id="@+id/first_row_title_row"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:padding="15dp">
-
-            <TextView
-                android:id="@+id/fist_row_title"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_centerVertical="true"
-                android:text="@string/first_row_title"
-                android:textColor="@color/black"
-                android:textSize="15sp"
-                android:textStyle="bold" />
-
-            <Button
-                android:id="@+id/fist_row_see_more"
-                style="@style/Widget.MaterialComponents.Button.TextButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
-                android:layout_centerVertical="true"
-                android:layout_margin="0dp"
-                android:drawableLeft="@drawable/ic_baseline_arrow_24"
-                android:padding="0dp"
-                android:text="@string/home_first_see_more"
-                android:textColor="@color/black"
-                android:textSize="15sp"
-                android:textStyle="bold" />
-        </RelativeLayout>
+            android:layout_height="match_parent"
+            android:layout_marginBottom="80dp"
+            android:orientation="vertical">
 
 
-        <HorizontalScrollView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingTop="20dp"
-            android:scrollbars="none">
+            <!--  header image  -->
+            <ImageView
+                android:id="@+id/home_wallpaper"
+                android:layout_width="fill_parent"
+                android:layout_height="250dp"
+                android:layout_marginBottom="30dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/wallpaper" />
 
+
+            <!-- first row -->
             <LinearLayout
+                android:id="@+id/first_row_wrapper"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:layout_marginBottom="40dp"
+                android:orientation="vertical">
 
-                <!-- first row items -->
-                <!-- item in scroll view -->
-                <LinearLayout
-                    android:layout_width="wrap_content"
+                <RelativeLayout
+                    android:id="@+id/first_row_title_row"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:layout_width="150dp"
-                        android:layout_height="80dp"
-                        android:src="@drawable/g15_1" />
+                    android:orientation="horizontal"
+                    android:padding="15dp">
 
                     <TextView
-                        android:layout_width="match_parent"
+                        android:id="@+id/fist_row_title"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/home_item_short_description"
-                        android:textAlignment="center"
-                        android:textSize="15sp" />
-                </LinearLayout>
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:text="@string/first_row_title"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
 
-                <!-- item in scroll view -->
-                <LinearLayout
+                    <Button
+                        android:id="@+id/fist_row_see_more"
+                        style="@style/Widget.MaterialComponents.Button.TextButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_margin="0dp"
+                        android:drawableLeft="@drawable/ic_baseline_arrow_24"
+                        android:padding="0dp"
+                        android:text="@string/home_first_see_more"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+
+                <HorizontalScrollView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                    android:paddingTop="20dp"
+                    android:scrollbars="none">
 
-                    <ImageView
-                        android:layout_width="150dp"
-                        android:layout_height="80dp"
-                        android:src="@drawable/g15_1" />
-
-                    <TextView
-                        android:layout_width="match_parent"
+                    <LinearLayout
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/home_item_short_description"
-                        android:textAlignment="center"
-                        android:textSize="15sp" />
-                </LinearLayout>
+                        android:orientation="horizontal">
 
-                <!-- item in scroll view -->
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                        <!-- first row items -->
+                        <!-- item in scroll view -->
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
 
-                    <ImageView
-                        android:layout_width="150dp"
-                        android:layout_height="80dp"
-                        android:src="@drawable/g15_1" />
+                            <ImageView
+                                android:layout_width="150dp"
+                                android:layout_height="80dp"
+                                android:src="@drawable/g15_1" />
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/home_item_short_description"
-                        android:textAlignment="center"
-                        android:textSize="15sp" />
-                </LinearLayout>
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/home_item_short_description"
+                                android:textAlignment="center"
+                                android:textSize="15sp" />
+                        </LinearLayout>
 
-                <!-- item in scroll view -->
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                        <!-- item in scroll view -->
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
 
-                    <ImageView
-                        android:layout_width="150dp"
-                        android:layout_height="80dp"
-                        android:src="@drawable/g15_1" />
+                            <ImageView
+                                android:layout_width="150dp"
+                                android:layout_height="80dp"
+                                android:src="@drawable/g15_1" />
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/home_item_short_description"
-                        android:textAlignment="center"
-                        android:textSize="15sp" />
-                </LinearLayout>
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/home_item_short_description"
+                                android:textAlignment="center"
+                                android:textSize="15sp" />
+                        </LinearLayout>
+
+                        <!-- item in scroll view -->
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="150dp"
+                                android:layout_height="80dp"
+                                android:src="@drawable/g15_1" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/home_item_short_description"
+                                android:textAlignment="center"
+                                android:textSize="15sp" />
+                        </LinearLayout>
+
+                        <!-- item in scroll view -->
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="150dp"
+                                android:layout_height="80dp"
+                                android:src="@drawable/g15_1" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/home_item_short_description"
+                                android:textAlignment="center"
+                                android:textSize="15sp" />
+                        </LinearLayout>
 
 
-                <!-- item in scroll view -->
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                        <!-- item in scroll view -->
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
 
-                    <ImageView
-                        android:layout_width="150dp"
-                        android:layout_height="80dp"
-                        android:src="@drawable/g15_1" />
+                            <ImageView
+                                android:layout_width="150dp"
+                                android:layout_height="80dp"
+                                android:src="@drawable/g15_1" />
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/home_item_short_description"
-                        android:textAlignment="center"
-                        android:textSize="15sp" />
-                </LinearLayout>
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/home_item_short_description"
+                                android:textAlignment="center"
+                                android:textSize="15sp" />
+                        </LinearLayout>
 
 
+                    </LinearLayout>
+                </HorizontalScrollView>
             </LinearLayout>
-        </HorizontalScrollView>
-    </LinearLayout>
 
 
-    <!-- second row -->
-    <LinearLayout
-        android:id="@+id/second_row_wrapper"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_marginBottom="40dp">
-
-        <RelativeLayout
-            android:id="@+id/second_row_title_row"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:padding="15dp">
-
-            <TextView
-                android:id="@+id/second_row_title"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_centerVertical="true"
-                android:text="@string/second_row_title"
-                android:textColor="@color/black"
-                android:textSize="15sp"
-                android:textStyle="bold" />
-
-            <Button
-                android:id="@+id/second_row_see_more"
-                style="@style/Widget.MaterialComponents.Button.TextButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
-                android:layout_centerVertical="true"
-                android:layout_margin="0dp"
-                android:drawableLeft="@drawable/ic_baseline_arrow_24"
-                android:padding="0dp"
-                android:text="@string/home_first_see_more"
-                android:textColor="@color/black"
-                android:textSize="15sp"
-                android:textStyle="bold" />
-        </RelativeLayout>
-
-
-        <HorizontalScrollView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingTop="20dp"
-            android:scrollbars="none">
-
+            <!-- second row -->
             <LinearLayout
+                android:id="@+id/second_row_wrapper"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:layout_marginBottom="40dp"
+                android:orientation="vertical">
 
-                <!-- second row items -->
-                <!-- item in scroll view -->
-                <LinearLayout
-                    android:layout_width="wrap_content"
+                <RelativeLayout
+                    android:id="@+id/second_row_title_row"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:layout_width="150dp"
-                        android:layout_height="80dp"
-                        android:src="@drawable/g15_1" />
+                    android:orientation="horizontal"
+                    android:padding="15dp">
 
                     <TextView
-                        android:layout_width="match_parent"
+                        android:id="@+id/second_row_title"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/home_item_short_description"
-                        android:textAlignment="center"
-                        android:textSize="15sp" />
-                </LinearLayout>
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:text="@string/second_row_title"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
 
-                <!-- item in scroll view -->
-                <LinearLayout
+                    <Button
+                        android:id="@+id/second_row_see_more"
+                        style="@style/Widget.MaterialComponents.Button.TextButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_margin="0dp"
+                        android:drawableLeft="@drawable/ic_baseline_arrow_24"
+                        android:padding="0dp"
+                        android:text="@string/home_first_see_more"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+
+                <HorizontalScrollView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                    android:paddingTop="20dp"
+                    android:scrollbars="none">
 
-                    <ImageView
-                        android:layout_width="150dp"
-                        android:layout_height="80dp"
-                        android:src="@drawable/g15_1" />
-
-                    <TextView
-                        android:layout_width="match_parent"
+                    <LinearLayout
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/home_item_short_description"
-                        android:textAlignment="center"
-                        android:textSize="15sp" />
-                </LinearLayout>
+                        android:orientation="horizontal">
 
-                <!-- item in scroll view -->
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                        <!-- second row items -->
+                        <!-- item in scroll view -->
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
 
-                    <ImageView
-                        android:layout_width="150dp"
-                        android:layout_height="80dp"
-                        android:src="@drawable/g15_1" />
+                            <ImageView
+                                android:layout_width="150dp"
+                                android:layout_height="80dp"
+                                android:src="@drawable/g15_1" />
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/home_item_short_description"
-                        android:textAlignment="center"
-                        android:textSize="15sp" />
-                </LinearLayout>
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/home_item_short_description"
+                                android:textAlignment="center"
+                                android:textSize="15sp" />
+                        </LinearLayout>
 
-                <!-- item in scroll view -->
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                        <!-- item in scroll view -->
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
 
-                    <ImageView
-                        android:layout_width="150dp"
-                        android:layout_height="80dp"
-                        android:src="@drawable/g15_1" />
+                            <ImageView
+                                android:layout_width="150dp"
+                                android:layout_height="80dp"
+                                android:src="@drawable/g15_1" />
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/home_item_short_description"
-                        android:textAlignment="center"
-                        android:textSize="15sp" />
-                </LinearLayout>
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/home_item_short_description"
+                                android:textAlignment="center"
+                                android:textSize="15sp" />
+                        </LinearLayout>
+
+                        <!-- item in scroll view -->
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="150dp"
+                                android:layout_height="80dp"
+                                android:src="@drawable/g15_1" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/home_item_short_description"
+                                android:textAlignment="center"
+                                android:textSize="15sp" />
+                        </LinearLayout>
+
+                        <!-- item in scroll view -->
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="150dp"
+                                android:layout_height="80dp"
+                                android:src="@drawable/g15_1" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/home_item_short_description"
+                                android:textAlignment="center"
+                                android:textSize="15sp" />
+                        </LinearLayout>
 
 
-                <!-- item in scroll view -->
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                        <!-- item in scroll view -->
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
 
-                    <ImageView
-                        android:layout_width="150dp"
-                        android:layout_height="80dp"
-                        android:src="@drawable/g15_1" />
+                            <ImageView
+                                android:layout_width="150dp"
+                                android:layout_height="80dp"
+                                android:src="@drawable/g15_1" />
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/home_item_short_description"
-                        android:textAlignment="center"
-                        android:textSize="15sp" />
-                </LinearLayout>
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/home_item_short_description"
+                                android:textAlignment="center"
+                                android:textSize="15sp" />
+                        </LinearLayout>
 
 
+                    </LinearLayout>
+                </HorizontalScrollView>
             </LinearLayout>
-        </HorizontalScrollView>
-    </LinearLayout>
 
 
-    <!-- third row-->
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/third_row_wrapper"
-        android:orientation="vertical"
-        android:layout_marginBottom="40dp">
-
-        <RelativeLayout
-            android:id="@+id/third_row_title_row"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:padding="15dp">
-
-            <TextView
-                android:id="@+id/third_row_title"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_centerVertical="true"
-                android:text="@string/third_row_title"
-                android:textColor="@color/black"
-                android:textSize="15sp"
-                android:textStyle="bold" />
-
-            <Button
-                android:id="@+id/third_row_see_more"
-                style="@style/Widget.MaterialComponents.Button.TextButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
-                android:layout_centerVertical="true"
-                android:layout_margin="0dp"
-                android:drawableLeft="@drawable/ic_baseline_arrow_24"
-                android:padding="0dp"
-                android:text="@string/home_first_see_more"
-                android:textColor="@color/black"
-                android:textSize="15sp"
-                android:textStyle="bold" />
-        </RelativeLayout>
-
-
-        <HorizontalScrollView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingTop="20dp"
-            android:scrollbars="none">
-
+            <!-- third row-->
             <LinearLayout
+                android:id="@+id/third_row_wrapper"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:layout_marginBottom="40dp"
+                android:orientation="vertical">
 
-                <!-- third row items -->
-                <!-- item in scroll view -->
-                <LinearLayout
-                    android:layout_width="wrap_content"
+                <RelativeLayout
+                    android:id="@+id/third_row_title_row"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:layout_width="150dp"
-                        android:layout_height="80dp"
-                        android:src="@drawable/g15_1" />
+                    android:orientation="horizontal"
+                    android:padding="15dp">
 
                     <TextView
-                        android:layout_width="match_parent"
+                        android:id="@+id/third_row_title"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/home_item_short_description"
-                        android:textAlignment="center"
-                        android:textSize="15sp" />
-                </LinearLayout>
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:text="@string/third_row_title"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
 
-                <!-- item in scroll view -->
-                <LinearLayout
+                    <Button
+                        android:id="@+id/third_row_see_more"
+                        style="@style/Widget.MaterialComponents.Button.TextButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_margin="0dp"
+                        android:drawableLeft="@drawable/ic_baseline_arrow_24"
+                        android:padding="0dp"
+                        android:text="@string/home_first_see_more"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+
+                <HorizontalScrollView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                    android:paddingTop="20dp"
+                    android:scrollbars="none">
 
-                    <ImageView
-                        android:layout_width="150dp"
-                        android:layout_height="80dp"
-                        android:src="@drawable/g15_1" />
-
-                    <TextView
-                        android:layout_width="match_parent"
+                    <LinearLayout
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/home_item_short_description"
-                        android:textAlignment="center"
-                        android:textSize="15sp" />
-                </LinearLayout>
+                        android:orientation="horizontal">
 
-                <!-- item in scroll view -->
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                        <!-- third row items -->
+                        <!-- item in scroll view -->
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
 
-                    <ImageView
-                        android:layout_width="150dp"
-                        android:layout_height="80dp"
-                        android:src="@drawable/g15_1" />
+                            <ImageView
+                                android:layout_width="150dp"
+                                android:layout_height="80dp"
+                                android:src="@drawable/g15_1" />
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/home_item_short_description"
-                        android:textAlignment="center"
-                        android:textSize="15sp" />
-                </LinearLayout>
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/home_item_short_description"
+                                android:textAlignment="center"
+                                android:textSize="15sp" />
+                        </LinearLayout>
 
-                <!-- item in scroll view -->
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                        <!-- item in scroll view -->
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
 
-                    <ImageView
-                        android:layout_width="150dp"
-                        android:layout_height="80dp"
-                        android:src="@drawable/g15_1" />
+                            <ImageView
+                                android:layout_width="150dp"
+                                android:layout_height="80dp"
+                                android:src="@drawable/g15_1" />
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/home_item_short_description"
-                        android:textAlignment="center"
-                        android:textSize="15sp" />
-                </LinearLayout>
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/home_item_short_description"
+                                android:textAlignment="center"
+                                android:textSize="15sp" />
+                        </LinearLayout>
+
+                        <!-- item in scroll view -->
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="150dp"
+                                android:layout_height="80dp"
+                                android:src="@drawable/g15_1" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/home_item_short_description"
+                                android:textAlignment="center"
+                                android:textSize="15sp" />
+                        </LinearLayout>
+
+                        <!-- item in scroll view -->
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="150dp"
+                                android:layout_height="80dp"
+                                android:src="@drawable/g15_1" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/home_item_short_description"
+                                android:textAlignment="center"
+                                android:textSize="15sp" />
+                        </LinearLayout>
 
 
-                <!-- item in scroll view -->
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                        <!-- item in scroll view -->
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
 
-                    <ImageView
-                        android:layout_width="150dp"
-                        android:layout_height="80dp"
-                        android:src="@drawable/g15_1" />
+                            <ImageView
+                                android:layout_width="150dp"
+                                android:layout_height="80dp"
+                                android:src="@drawable/g15_1" />
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/home_item_short_description"
-                        android:textAlignment="center"
-                        android:textSize="15sp" />
-                </LinearLayout>
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/home_item_short_description"
+                                android:textAlignment="center"
+                                android:textSize="15sp" />
+                        </LinearLayout>
 
 
+                    </LinearLayout>
+                </HorizontalScrollView>
             </LinearLayout>
-        </HorizontalScrollView>
-    </LinearLayout>
 
 
-    </LinearLayout>
-</androidx.core.widget.NestedScrollView>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
 
 
 </RelativeLayout>

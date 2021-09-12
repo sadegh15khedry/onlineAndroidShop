@@ -80,15 +80,13 @@ public class MainActivity extends AppCompatActivity {
         bottomNavigationView.setSelectedItemId(R.id.nav_home);
 
 
-
-
         final TextInputLayout textInputLayout = findViewById(R.id.search_input_layout);
         textInputLayout.setEndIconOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick (View v){
+            public void onClick(View v) {
 
-                    Toast.makeText(getBaseContext(),"this works",
-                    Toast.LENGTH_SHORT).show();
+                Toast.makeText(getBaseContext(), "this works",
+                        Toast.LENGTH_SHORT).show();
             }
         });
     }
@@ -173,8 +171,6 @@ public class MainActivity extends AppCompatActivity {
             return true;
         }
     };
-
-
 
 
 }

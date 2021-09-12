@@ -27,7 +27,7 @@ public class ResultsAdapter extends RecyclerView.Adapter<ResultsAdapter.ResultsV
     @Override
     public ResultsAdapter.ResultsViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(context);
-        View view = inflater.inflate(R.layout.row_categories, parent, false);
+        View view = inflater.inflate(R.layout.row_results, parent, false);
         return new ResultsViewHolder(view);
     }
 
@@ -36,7 +36,6 @@ public class ResultsAdapter extends RecyclerView.Adapter<ResultsAdapter.ResultsV
         holder.myTitle.setText(this.titles[position]);
         holder.myPrice.setText(this.prices[position]);
         holder.myImageView.setImageResource(this.images[position]);
-
     }
 
     @Override

@@ -32,7 +32,7 @@ public class LoginActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayShowTitleEnabled(false);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-       //bottom navigation
+        //bottom navigation
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
         bottomNavigationView.setSelectedItemId(R.id.nav_profile);
 //        bottomNavigationView.setOnItemSelectedListener((NavigationBarView.OnItemSelectedListener) bottomNavigationItemSelectedListener);
@@ -95,10 +95,6 @@ public class LoginActivity extends AppCompatActivity {
 //            return true;
 //        }
 //    };
-
-
-
-
 
 
 }

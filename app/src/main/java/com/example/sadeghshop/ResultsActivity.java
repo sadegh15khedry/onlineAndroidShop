@@ -46,19 +46,17 @@ public class ResultsActivity extends AppCompatActivity {
     }
 
     public void onResume() {
-
-//        String[] titles = {"آیتم1", "آیتم1", "آیتم1", "آیتم1", "آیتم1"};
-        //String[] titles = {"test","test","test","test","test"};
-        //String[] prices = {"2000", "2000", "2000", "2000", "2000"};
-
+        //setting our recyclerView
         String[] titles = getResources().getStringArray(R.array.results_titles);
         String[] prices = getResources().getStringArray(R.array.results_prices);
-        int[] images = {R.drawable.wallpaper, R.drawable.wallpaper,
+        int[] images = {R.drawable.wallpaper, R.drawable.wallpaper, R.drawable.wallpaper
+                , R.drawable.wallpaper, R.drawable.wallpaper, R.drawable.wallpaper,
+                R.drawable.wallpaper, R.drawable.wallpaper, R.drawable.wallpaper,
                 R.drawable.wallpaper};
         RecyclerView recyclerResultsView = findViewById(R.id.recycler_results_view);
-        ResultsAdapter adapter = new ResultsAdapter(this, titles, prices,images);
+        ResultsAdapter adapter = new ResultsAdapter(this, titles, prices, images);
         recyclerResultsView.setAdapter(adapter);
-        recyclerResultsView.setLayoutManager(new LinearLayoutManager(getBaseContext()));
+        recyclerResultsView.setLayoutManager(new LinearLayoutManager(this));
 
 
         super.onResume();
