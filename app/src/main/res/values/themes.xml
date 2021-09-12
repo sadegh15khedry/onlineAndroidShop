@@ -14,10 +14,13 @@
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
         <item name="buttonStyle">@style/Widget.AppCompat.Button</item>
+<!--        <item name="android:actionBarSize">64dp</item>-->
+<!--        <item name="actionBarSize">80dp</item>-->
     </style>
 
 
     <style name="Theme.SadeghShop.NoActionBar">
+
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>

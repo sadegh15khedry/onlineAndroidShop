@@ -5,8 +5,10 @@ import android.os.Bundle;
 import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.Toast;
 
 
 import androidx.annotation.NonNull;
@@ -20,6 +22,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 import com.google.android.material.navigation.NavigationView;
+import com.google.android.material.textfield.TextInputLayout;
 
 
 //                    Toast.makeText(getBaseContext(),"this works",
@@ -36,12 +39,12 @@ import com.google.android.material.navigation.NavigationView;
 //        });
 
 
-public class MainActivity extends AppCompatActivity{
+public class MainActivity extends AppCompatActivity {
 
     private DrawerLayout drawerLayout;
     private ActionBarDrawerToggle actionBarDrawerToggle;
-    private Fragment selectedFragment  = null;
-   // private boolean loggedIn = true;
+    private Fragment selectedFragment = null;
+    // private boolean loggedIn = true;
     private boolean loggedIn = false;
 
     @Override
@@ -57,7 +60,7 @@ public class MainActivity extends AppCompatActivity{
 
 
         //setting drawer and drawer toggle btn
-        drawerLayout =  findViewById(R.id.myDrawer);
+        drawerLayout = findViewById(R.id.myDrawer);
         actionBarDrawerToggle = new ActionBarDrawerToggle(this, drawerLayout, R.string.open_actionbar, R.string.close_actionbar);
         drawerLayout.addDrawerListener(actionBarDrawerToggle);
         actionBarDrawerToggle.syncState();
@@ -65,7 +68,6 @@ public class MainActivity extends AppCompatActivity{
         //setting drawer menu item listener
         NavigationView navigationView = findViewById(R.id.side_navigation);
         navigationView.setNavigationItemSelectedListener((NavigationView.OnNavigationItemSelectedListener) sideNavigationItemSelectedListener);
-
 
 
         //setting bottom navigation
@@ -80,22 +82,19 @@ public class MainActivity extends AppCompatActivity{
 
 
 
-//        String[] items = {"sdf","kldjfas"};
-//        ArrayAdapter<String> adapter = new ArrayAdapter<String> (this,
-//                android.R.layout.simple_list_item_1,
-//                android.R.id.text1,
-//                items);
-//        ListView view = findViewById(R.id.recycler_view);
-//        view.setAdapter(adapter);
+        final TextInputLayout textInputLayout = findViewById(R.id.search_input_layout);
+        textInputLayout.setEndIconOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick (View v){
 
-
-
-
+                    Toast.makeText(getBaseContext(),"this works",
+                    Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
 
-
-    public void setMyFragment(Fragment fragment){
+    public void setMyFragment(Fragment fragment) {
         this.selectedFragment = fragment;
     }
 
@@ -117,7 +116,6 @@ public class MainActivity extends AppCompatActivity{
     }
 
 
-
     //bottom nav item select
     private BottomNavigationView.OnItemSelectedListener bottomNavigationItemSelectedListener = new BottomNavigationView.OnItemSelectedListener() {
         @Override
@@ -132,8 +130,7 @@ public class MainActivity extends AppCompatActivity{
                     if (loggedIn) {
                         selectedFragment = new ProfileFragment();
                         break;
-                    }
-                    else {
+                    } else {
                         Intent intent = new Intent(getBaseContext(), LoginActivity.class);
                         startActivity(intent);
                         return true;
@@ -141,18 +138,13 @@ public class MainActivity extends AppCompatActivity{
                 case R.id.nav_cart:
                     selectedFragment = new CartFragment();
                     break;
-                case R.id.nav_categories:
-                    selectedFragment = new CategoriesFragment();
-                    break;
+
             }
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                     selectedFragment).commit();
             return true;
         }
     };
-
-
-
 
 
     //side nav item selected
@@ -167,8 +159,8 @@ public class MainActivity extends AppCompatActivity{
                 case R.id.nav_about:
                     selectedFragment = new AboutFragment();
                     break;
-                case R.id.nav_settings:
-                    selectedFragment = new SettingsFragment();
+                case R.id.nav_categories:
+                    selectedFragment = new CategoriesFragment();
                     break;
                 case R.id.nav_exit:
                     finish();
