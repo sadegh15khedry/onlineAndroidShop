@@ -57,4 +57,14 @@
     <string name="home_item_short_description">لبتاب خوب ایسوس</string>
     <string name="second_row_title">دسته دوم</string>
     <string name="third_row_title">دسته سوم</string>
+    <string name="item_specs_title">ویژگی های محصول</string>
+    <string name="item_brand">ایسوس</string>
+    <string name="item_title">لبتاب خوب ایسوس</string>
+    <string name="item_review_row_title">نقد و بررسی</string>
+    <string name="item_review">لپ تاپ Asus ROG Strix G15 G513QE شگفتی دیگری از کمپانی قدرتمند ایسوس است که برای گیمرها طراحی شده است. عملکرد بی‌نظیر این دستگاه به‌واسطه به‌کارگیری پردازنده مرکزی توانمند AMD Ryzen 7 5800H و پردازنده گرافیکی بسیار قدرتمند NVIDIA Geforce RTX 3050Ti است که تجربه گیم بی‌نظیری را برای گیمرها به‌ارمغان می‌آورد. مجهز شدن G513QE به حافظه یک ترابایتی از نوع SSD سرعت فوق‌العاده و فضای گسترده‌ای را در پی دارد که به اجرای روان بازی کمک می‌کند. صفحه‌نمایش مات با رزولوشن FHD 1920 x 1080 هیجان یک گیم زنده را با تصاویر واقعی مهیا می‌سازد، همچنین به‌واسطه مات بودن نمایشگر تمرکز شما روی تصاویر با کیفیت بیشتر خواهد شد. طراحی با استحکام و وزن سبک 2.3 کیلوگرمی این لپ‌تاپ منجر می‌شود بتوانید آن را به‌راحتی با خود حمل کنید. گفتنی است ایسوس این محصول خود را به Wi-Fi 6 802.11ax مجهز کرده است تا قابلیت اجرای بی‌عیب‌و‌نقص بازی‌های آنلاین را ایجاد کند، همچنین پورت‌های کاربردی و بلوتوث به‌روز، این دستگاه را پشتیبانی می‌کنند.</string>
+    <string name="item_user_review_text">متن نظر کاربر متن نظر کاربر متن نظر کاربر متن نظر کاربر متن نظر کاربر متن نظر کاربر متن نظر کاربر متن نظر کاربر متن نظر کاربر متن نظر کاربر متن نظر کاربر متن نظر کاربر متن نظر کاربر متن نظر کاربر </string>
+    <string name="item_user_review_title">عنوان نظر کاربر</string>
+    <string name="item_user_review_row_title">نظر کاربران</string>
+    <string name="item_add_review_button">نظر خود را ثبت کنید</string>
+    <string name="item_suggestions_title">کالاهای پیشنهادی</string>
 </resources>
