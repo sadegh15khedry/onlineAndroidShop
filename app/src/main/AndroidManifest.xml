@@ -14,15 +14,6 @@
             android:name=".ItemActivity"
             android:exported="true" />
         <activity
-            android:name=".SignupActivity"
-            android:exported="true" />
-        <activity
-            android:name=".LoginActivity"
-            android:exported="true" />
-        <activity
-            android:name=".ResultsActivity"
-            android:exported="true" />
-        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

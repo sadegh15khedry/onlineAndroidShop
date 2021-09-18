@@ -15,14 +15,11 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <include
-            android:id="@+id/my_toolbar"
-            layout="@layout/toolbar" />
 
         <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_below="@+id/my_toolbar">
+            android:layout_alignParentTop="true">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -310,6 +307,7 @@
 
                             </LinearLayout>
                         </HorizontalScrollView>
+
                         <Button
                             style="@style/Widget.MaterialComponents.Button.TextButton"
                             android:layout_width="match_parent"
@@ -319,7 +317,6 @@
                             android:textSize="15sp" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
-
 
 
                 <!--item suggestions -->
@@ -340,12 +337,11 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="15dp"
-                            android:text="@string/item_suggestions_title"
                             android:paddingStart="20dp"
                             android:paddingEnd="20dp"
+                            android:text="@string/item_suggestions_title"
                             android:textSize="18sp"
                             android:textStyle="bold" />
-
 
 
                         <HorizontalScrollView
@@ -357,8 +353,8 @@
                             <LinearLayout
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:orientation="horizontal"
-                                android:layout_marginBottom="20dp">
+                                android:layout_marginBottom="20dp"
+                                android:orientation="horizontal">
 
                                 <!-- item in scroll view -->
                                 <LinearLayout
@@ -461,8 +457,6 @@
                         </HorizontalScrollView>
 
 
-
-
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
@@ -470,13 +464,35 @@
             </LinearLayout>
         </androidx.core.widget.NestedScrollView>
 
-
-        <com.google.android.material.bottomnavigation.BottomNavigationView
-            android:id="@+id/bottom_navigation"
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            app:menu="@menu/menu_bottom_navigation" />
+            android:orientation="horizontal"
+            >
+
+            <Button
+                android:layout_alignParentStart="true"
+                android:id="@+id/add_to_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/add_to_cart"
+                android:textAlignment="center" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/item_price"
+                android:layout_toStartOf="@id/price_currency"/>
+            <TextView
+                android:id="@+id/price_currency"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/item_price_currency"
+                android:layout_alignParentEnd="true"/>
+
+        </RelativeLayout>
+
+
     </RelativeLayout>
 
     <com.google.android.material.navigation.NavigationView
@@ -484,7 +500,7 @@
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="start"
-        app:menu="@menu/menu_side_navigation"/>
+        app:menu="@menu/menu_side_navigation" />
 
 
 </androidx.drawerlayout.widget.DrawerLayout>

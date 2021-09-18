@@ -93,18 +93,6 @@ public class MainActivity extends AppCompatActivity {
 
 
     @Override
-    public void onConfigurationChanged(@NonNull Configuration newConfig) {
-        super.onConfigurationChanged(newConfig);
-        if (newConfig.orientation == Configuration.ORIENTATION_PORTRAIT) {
-
-        }
-    }
-
-    public void setMyFragment(Fragment fragment) {
-        this.selectedFragment = fragment;
-    }
-
-    @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         return true;
     }
@@ -131,19 +119,22 @@ public class MainActivity extends AppCompatActivity {
                 case R.id.nav_home:
                     selectedFragment = new HomeFragment();
                     break;
+                case R.id.nav_categories:
+                    selectedFragment = new CategoriesFragment();
+                    break;
                 case R.id.nav_cart:
                     selectedFragment = new CartFragment();
-
+                    break;
                 case R.id.nav_profile:
                     if (loggedIn) {
                         selectedFragment = new ProfileFragment();
                         break;
                     } else {
                         selectedFragment = new LoginFragment();
-                        Toast.makeText(getBaseContext(), "this works",
-                                Toast.LENGTH_SHORT).show();
+                        break;
 
                     }
+
 
             }
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
@@ -164,9 +155,6 @@ public class MainActivity extends AppCompatActivity {
             switch (item.getItemId()) {
                 case R.id.nav_about:
                     selectedFragment = new AboutFragment();
-                    break;
-                case R.id.nav_categories:
-                    selectedFragment = new CategoriesFragment();
                     break;
                 case R.id.nav_exit:
                     Intent intent = new Intent(getBaseContext(), ItemActivity.class);

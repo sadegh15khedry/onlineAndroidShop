@@ -21,16 +21,11 @@ public class ItemActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_item);
 
-        //setting our custom toolbar
-        Toolbar toolbar = findViewById(R.id.my_toolbar);
-        setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayShowTitleEnabled(false);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        //bottom navigation
-        BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
-        bottomNavigationView.setSelectedItemId(R.id.nav_profile);
-        bottomNavigationView.setSelectedItemId(R.id.nav_home);
+//        //bottom navigation
+//        BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
+//        bottomNavigationView.setSelectedItemId(R.id.nav_profile);
+//        bottomNavigationView.setSelectedItemId(R.id.nav_home);
 
 
         //setting drawer and drawer toggle btn

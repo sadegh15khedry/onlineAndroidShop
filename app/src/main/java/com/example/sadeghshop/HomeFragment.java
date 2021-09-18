@@ -31,9 +31,8 @@ public class HomeFragment extends Fragment {
         myButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                Snackbar.make(view,"thank god",Snackbar.LENGTH_LONG).show();
-                Intent intent = new Intent(getContext(), ResultsActivity.class);
-                startActivity(intent);
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                        new ResultsFragment()).commit();
             }
         });
 

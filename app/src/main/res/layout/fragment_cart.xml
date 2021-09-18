@@ -16,7 +16,7 @@
             android:paddingRight="20dp"
             android:text="@string/cart_text"
             android:textAlignment="center"
-            android:textSize="20sp" />
+            android:textSize="20sp"/>
 
     </RelativeLayout>
 
