@@ -1,6 +1,7 @@
 package com.example.sadeghshop;
 
 import android.content.Intent;
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.Menu;
@@ -19,6 +20,7 @@ import androidx.fragment.app.Fragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 import com.google.android.material.navigation.NavigationView;
+import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.textfield.TextInputLayout;
 
 
@@ -41,7 +43,8 @@ public class MainActivity extends AppCompatActivity {
     private DrawerLayout drawerLayout;
     private ActionBarDrawerToggle actionBarDrawerToggle;
     private Fragment selectedFragment = null;
-    // private boolean loggedIn = true;
+    private BottomNavigationView bottomNavigationView;
+    //private boolean loggedIn = true;
     private boolean loggedIn = false;
 
     @Override
@@ -68,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         //setting bottom navigation
-        BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
+        bottomNavigationView = findViewById(R.id.bottom_navigation);
         bottomNavigationView.setOnItemSelectedListener((NavigationBarView.OnItemSelectedListener) bottomNavigationItemSelectedListener);
 
         //setting our first fragment
@@ -88,6 +91,14 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+
+    @Override
+    public void onConfigurationChanged(@NonNull Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
+        if (newConfig.orientation == Configuration.ORIENTATION_PORTRAIT) {
+
+        }
+    }
 
     public void setMyFragment(Fragment fragment) {
         this.selectedFragment = fragment;
@@ -116,39 +127,39 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             Fragment selectedFragment = null;
-
             switch (item.getItemId()) {
                 case R.id.nav_home:
                     selectedFragment = new HomeFragment();
                     break;
+                case R.id.nav_cart:
+                    selectedFragment = new CartFragment();
+
                 case R.id.nav_profile:
                     if (loggedIn) {
                         selectedFragment = new ProfileFragment();
                         break;
                     } else {
-                        Intent intent = new Intent(getBaseContext(), LoginActivity.class);
-                        startActivity(intent);
-                        return true;
+                        selectedFragment = new LoginFragment();
+                        Toast.makeText(getBaseContext(), "this works",
+                                Toast.LENGTH_SHORT).show();
+
                     }
-                case R.id.nav_cart:
-                    selectedFragment = new CartFragment();
-                    break;
 
             }
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                     selectedFragment).commit();
             return true;
         }
+
     };
 
 
     //side nav item selected
-    private NavigationView.OnNavigationItemSelectedListener sideNavigationItemSelectedListener = new NavigationView.OnNavigationItemSelectedListener() {
+    private NavigationView.OnNavigationItemSelectedListener sideNavigationItemSelectedListener
+            = new NavigationView.OnNavigationItemSelectedListener() {
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             Fragment selectedFragment = null;
-//            Toast.makeText(getBaseContext(),"this works",
-//                    Toast.LENGTH_SHORT).show();
 
             switch (item.getItemId()) {
                 case R.id.nav_about:
@@ -166,6 +177,7 @@ public class MainActivity extends AppCompatActivity {
 //                    break;
             }
             drawerLayout.closeDrawers();
+            bottomNavigationView.getMenu().setGroupCheckable(0, false, true);
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                     selectedFragment).commit();
             return true;

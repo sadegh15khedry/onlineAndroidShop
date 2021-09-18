@@ -44,14 +44,14 @@ public class LoginActivity extends AppCompatActivity {
         actionBarDrawerToggle.syncState();
 
         //signup page button
-        Button signupButton = (Button) findViewById(R.id.login_to_signup_btn);
-        signupButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(LoginActivity.this, SignupActivity.class);
-                startActivity(intent);
-            }
-        });
+//        Button signupButton = (Button) findViewById(R.id.login_to_signup_btn);
+//        signupButton.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent = new Intent(LoginActivity.this, SignupActivity.class);
+//                startActivity(intent);
+//            }
+//        });
 
     }
 

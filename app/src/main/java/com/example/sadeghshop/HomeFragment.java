@@ -12,6 +12,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.viewpager2.widget.ViewPager2;
 
 import com.google.android.material.snackbar.Snackbar;
 
@@ -35,6 +36,14 @@ public class HomeFragment extends Fragment {
                 startActivity(intent);
             }
         });
+
+
+//        ViewPager2 viewPager2 = getView().findViewById(R.id.view_pager);
+//        SlideShowAdapter adapter = new SlideShowAdapter(getContext());
+//        viewPager2.se
+
+
         super.onResume();
     }
+
 }
