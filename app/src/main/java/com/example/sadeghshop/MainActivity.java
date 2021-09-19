@@ -160,9 +160,6 @@ public class MainActivity extends AppCompatActivity {
                     Intent intent = new Intent(getBaseContext(), ItemActivity.class);
                     startActivity(intent);
                     return true;
-//                    finish();
-//                    System.exit(0);
-//                    break;
             }
             drawerLayout.closeDrawers();
             bottomNavigationView.getMenu().setGroupCheckable(0, false, true);

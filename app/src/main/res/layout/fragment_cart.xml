@@ -3,21 +3,22 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <RelativeLayout
+
+    <!--        <TextView-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_centerHorizontal="true"-->
+    <!--            android:layout_centerVertical="true"-->
+    <!--            android:paddingLeft="20dp"-->
+    <!--            android:paddingRight="20dp"-->
+    <!--            android:text="@string/cart_text"-->
+    <!--            android:textAlignment="center"-->
+    <!--            android:textSize="20sp"/>-->
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/cart_recycler_view"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
-            android:paddingLeft="20dp"
-            android:paddingRight="20dp"
-            android:text="@string/cart_text"
-            android:textAlignment="center"
-            android:textSize="20sp"/>
-
-    </RelativeLayout>
+        android:layout_height="match_parent"
+        android:layout_marginBottom="80dp" />
 
 </RelativeLayout>
