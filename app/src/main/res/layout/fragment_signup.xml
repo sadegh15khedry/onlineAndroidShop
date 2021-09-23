@@ -25,7 +25,8 @@
                 android:layout_gravity="center"
                 android:paddingBottom="25dp"
                 android:text="@string/signup_title"
-                android:textSize="18sp" />
+                android:textSize="@dimen/heading_2"
+                android:textStyle="bold"/>
 
 
             <!--full name-->
@@ -141,6 +142,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:text="@string/signup_btn"
+                android:textSize="@dimen/normal_text"
                 android:textAlignment="center" />
 
 
@@ -152,7 +154,8 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/signup_to_login_des" />
+                    android:text="@string/signup_to_login_des"
+                    android:textSize="@dimen/normal_text"/>
 
                 <Button
                     android:id="@+id/signup_to_login_btn"
@@ -160,6 +163,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/signup_to_login_btn"
+                    android:textSize="@dimen/normal_text"
                     android:textColor="@color/black" />
             </LinearLayout>
 

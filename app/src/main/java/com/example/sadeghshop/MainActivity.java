@@ -43,8 +43,8 @@ public class MainActivity extends AppCompatActivity {
     private DrawerLayout drawerLayout;
     private Fragment selectedFragment;
     private BottomNavigationView bottomNavigationView;
-    private boolean loggedIn = true;
-    //private boolean loggedIn = false;
+    //private boolean loggedIn = true;
+    private boolean loggedIn = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -127,7 +127,7 @@ public class MainActivity extends AppCompatActivity {
             } else if (item.getItemId() == R.id.nav_profile && loggedIn) {
                 selectedFragment = new ProfileFragment();
 
-            } else if (item.getItemId() == R.id.nav_home && !loggedIn) {
+            } else if (item.getItemId() == R.id.nav_profile&& !loggedIn) {
                 selectedFragment = new LoginFragment();
             }
 

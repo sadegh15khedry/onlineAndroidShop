@@ -1,3 +1,13 @@
 <resources>
     <dimen name="fab_margin">48dp</dimen>
+    <dimen name="profile_background_height">300dp</dimen>
+    <dimen name="profile_name">40sp</dimen>
+    <dimen name="profile_id">25sp</dimen>
+    <dimen name="normal_text">20sp</dimen>
+    <dimen name="icon_size">30dp</dimen>
+    <dimen name="heading_2">28sp</dimen>
+    <dimen name="heading_3">23sp</dimen>
+    <dimen name="signup_textedit_width">400dp</dimen>
+
+
 </resources>
