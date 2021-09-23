@@ -41,11 +41,10 @@ import com.google.android.material.textfield.TextInputLayout;
 public class MainActivity extends AppCompatActivity {
 
     private DrawerLayout drawerLayout;
-    private ActionBarDrawerToggle actionBarDrawerToggle;
-    private Fragment selectedFragment = null;
+    private Fragment selectedFragment;
     private BottomNavigationView bottomNavigationView;
-    //private boolean loggedIn = true;
-    private boolean loggedIn = false;
+    private boolean loggedIn = true;
+    //private boolean loggedIn = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,18 +60,17 @@ public class MainActivity extends AppCompatActivity {
 
         //setting drawer and drawer toggle btn
         drawerLayout = findViewById(R.id.myDrawer);
-        actionBarDrawerToggle = new ActionBarDrawerToggle(this, drawerLayout, R.string.open_actionbar, R.string.close_actionbar);
+        ActionBarDrawerToggle actionBarDrawerToggle = new ActionBarDrawerToggle(this, drawerLayout, R.string.open_actionbar, R.string.close_actionbar);
         drawerLayout.addDrawerListener(actionBarDrawerToggle);
         actionBarDrawerToggle.syncState();
 
         //setting drawer menu item listener
         NavigationView navigationView = findViewById(R.id.side_navigation);
-        navigationView.setNavigationItemSelectedListener((NavigationView.OnNavigationItemSelectedListener) sideNavigationItemSelectedListener);
-
+        navigationView.setNavigationItemSelectedListener(sideNavigationItemSelectedListener);
 
         //setting bottom navigation
         bottomNavigationView = findViewById(R.id.bottom_navigation);
-        bottomNavigationView.setOnItemSelectedListener((NavigationBarView.OnItemSelectedListener) bottomNavigationItemSelectedListener);
+        bottomNavigationView.setOnItemSelectedListener(bottomNavigationItemSelectedListener);
 
         //setting our first fragment
         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
@@ -80,15 +78,15 @@ public class MainActivity extends AppCompatActivity {
         bottomNavigationView.setSelectedItemId(R.id.nav_home);
 
 
-        final TextInputLayout textInputLayout = findViewById(R.id.search_input_layout);
-        textInputLayout.setEndIconOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                Toast.makeText(getBaseContext(), "this works",
-                        Toast.LENGTH_SHORT).show();
-            }
-        });
+//        final TextInputLayout textInputLayout = findViewById(R.id.search_input_layout);
+//        textInputLayout.setEndIconOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//
+//                Toast.makeText(getBaseContext(), "this works",
+//                        Toast.LENGTH_SHORT).show();
+//            }
+//        });
     }
 
 
@@ -100,7 +98,9 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         //drawer btn stuff
-        if (item != null && item.getItemId() == android.R.id.home) {
+//        if (item != null && item.getItemId() == android.R.id.home) {
+        if (item.getItemId() == android.R.id.home) {
+
             if (drawerLayout.isDrawerOpen(Gravity.RIGHT))
                 drawerLayout.closeDrawer(Gravity.RIGHT);
             else
@@ -111,32 +111,26 @@ public class MainActivity extends AppCompatActivity {
 
 
     //bottom nav item select
-    private BottomNavigationView.OnItemSelectedListener bottomNavigationItemSelectedListener = new BottomNavigationView.OnItemSelectedListener() {
+    final private BottomNavigationView.OnItemSelectedListener bottomNavigationItemSelectedListener = new BottomNavigationView.OnItemSelectedListener() {
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-            Fragment selectedFragment = null;
-            switch (item.getItemId()) {
-                case R.id.nav_home:
-                    selectedFragment = new HomeFragment();
-                    break;
-                case R.id.nav_categories:
-                    selectedFragment = new CategoriesFragment();
-                    break;
-                case R.id.nav_cart:
-                    selectedFragment = new CartFragment();
-                    break;
-                case R.id.nav_profile:
-                    if (loggedIn) {
-                        selectedFragment = new ProfileFragment();
-                        break;
-                    } else {
-                        selectedFragment = new LoginFragment();
-                        break;
 
-                    }
+            if (item.getItemId() == R.id.nav_home) {
+                selectedFragment = new HomeFragment();
 
+            } else if (item.getItemId() == R.id.nav_categories) {
+                selectedFragment = new CategoriesFragment();
 
+            } else if (item.getItemId() == R.id.nav_cart) {
+                selectedFragment = new CartFragment();
+
+            } else if (item.getItemId() == R.id.nav_profile && loggedIn) {
+                selectedFragment = new ProfileFragment();
+
+            } else if (item.getItemId() == R.id.nav_home && !loggedIn) {
+                selectedFragment = new LoginFragment();
             }
+
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                     selectedFragment).commit();
             return true;
@@ -146,21 +140,20 @@ public class MainActivity extends AppCompatActivity {
 
 
     //side nav item selected
-    private NavigationView.OnNavigationItemSelectedListener sideNavigationItemSelectedListener
+    final private NavigationView.OnNavigationItemSelectedListener sideNavigationItemSelectedListener
             = new NavigationView.OnNavigationItemSelectedListener() {
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-            Fragment selectedFragment = null;
+            selectedFragment = new HomeFragment();
 
-            switch (item.getItemId()) {
-                case R.id.nav_about:
-                    selectedFragment = new AboutFragment();
-                    break;
-                case R.id.nav_exit:
-                    Intent intent = new Intent(getBaseContext(), ItemActivity.class);
-                    startActivity(intent);
-                    return true;
+            if (item.getItemId() == R.id.nav_about) {
+                selectedFragment = new AboutFragment();
+            } else if (item.getItemId() == R.id.nav_exit) {
+                Intent intent = new Intent(getBaseContext(), ItemActivity.class);
+                startActivity(intent);
+                return true;
             }
+
             drawerLayout.closeDrawers();
             bottomNavigationView.getMenu().setGroupCheckable(0, false, true);
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,

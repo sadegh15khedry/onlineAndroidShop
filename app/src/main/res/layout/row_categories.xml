@@ -13,14 +13,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
-            android:layout_alignParentRight="true"
             android:layout_margin="15dp"
             android:textSize="20sp" />
 
         <ImageView
+            android:contentDescription="@string/arrow_icon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
             android:layout_alignParentEnd="true"
             android:layout_margin="10dp"
             android:src="@drawable/ic_baseline_arrow_24" />
