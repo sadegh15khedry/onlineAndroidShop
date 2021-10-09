@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">فروشگاه آنلاین صادق</string>
+    <string name="app_name">Sadegh Shop</string>
     <string name="account_nav_title">حساب کاربری</string>
     <string name="home_nav_title">صفحه اصلی</string>
     <string name="categories_nav_title">دسته بندی ها</string>
@@ -29,7 +29,7 @@
     <string name="about_text">این اپلیکیشن به عنوان یک پروژه ی آزمایشی توسط صادق خدری پیاده سازی شده است.</string>
     <string name="cart_text">برای استفاده از سبد خرید ابتدا ثبت نام کنید.</string>
     <string name="profile_full_name">هومر سیمسون</string>
-    <string name="profile_id"> &#64;HomerSimpsons </string>
+    <string name="profile_id"> /&#64;HomerSimpsons </string>
     <string name="profile_email">homer_simpson@gmail.com</string>
     <string name="profile_phone">09175552424</string>
     <string name="profile_address">بوشهر خیابان سنگی کوچه ی گلخونه ساختمان دوم سمت راست واحد 1</string>
@@ -67,7 +67,6 @@
     <string name="item_user_review_row_title">نظر کاربران</string>
     <string name="item_add_review_button">نظر خود را ثبت کنید</string>
     <string name="item_suggestions_title">کالاهای پیشنهادی</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="add_to_cart">افزودن به سبد خرید</string>
     <string name="item_price_currency">تومان</string>
