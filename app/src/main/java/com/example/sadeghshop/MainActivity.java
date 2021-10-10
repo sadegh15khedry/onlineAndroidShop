@@ -51,12 +51,12 @@ import okhttp3.Response;
 public class MainActivity extends AppCompatActivity {
 
     private boolean isNetworkConnected;
-    //private boolean loggedIn = true;
-    private boolean loggedIn = false;
+    private boolean loggedIn = true;
+    //private boolean loggedIn = false;
     private String searchValue;
 
 
-    @RequiresApi(api = Build.VERSION_CODES.M)
+    //@RequiresApi(api = Build.VERSION_CODES.M)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
