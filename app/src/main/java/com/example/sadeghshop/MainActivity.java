@@ -101,9 +101,14 @@ public class MainActivity extends AppCompatActivity {
 //                intent.setData(Uri.parse(url));
 //                startService(intent);
 
-                Toast.makeText(getBaseContext(), searchValue,
-                        Toast.LENGTH_SHORT).show();
+//                Toast.makeText(getBaseContext(), searchValue,
+//                        Toast.LENGTH_SHORT).show();
+//                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+//                        new ResultsFragment()).commit();
 
+
+                Intent intent = new Intent(getApplicationContext(), ItemActivity.class);
+                startActivity(intent);
             }
         });
 
