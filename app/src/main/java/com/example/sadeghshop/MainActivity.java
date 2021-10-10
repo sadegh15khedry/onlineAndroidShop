@@ -28,6 +28,7 @@ import androidx.fragment.app.Fragment;
 import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 
 import com.example.sadeghshop.services.MyService;
+import com.example.sadeghshop.utils.NetworkHelper;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 import com.google.android.material.navigation.NavigationView;
@@ -48,6 +49,7 @@ public class MainActivity extends AppCompatActivity {
     private DrawerLayout drawerLayout;
     private Fragment selectedFragment;
     private BottomNavigationView bottomNavigationView;
+    private boolean isNetworkConnected;
     //private boolean loggedIn = true;
     private boolean loggedIn = false;
 
@@ -57,23 +59,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
         //setting our custom toolbar
         Toolbar toolbar = findViewById(R.id.my_toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayShowTitleEnabled(false);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-
-        //setting drawer and drawer toggle btn
-        drawerLayout = findViewById(R.id.myDrawer);
-        ActionBarDrawerToggle actionBarDrawerToggle = new ActionBarDrawerToggle(this, drawerLayout, R.string.open_actionbar, R.string.close_actionbar);
-        drawerLayout.addDrawerListener(actionBarDrawerToggle);
-        actionBarDrawerToggle.syncState();
-
-
-        //setting drawer menu item listener
-        NavigationView navigationView = findViewById(R.id.side_navigation);
-        navigationView.setNavigationItemSelectedListener(sideNavigationItemSelectedListener);
 
         //setting bottom navigation
         bottomNavigationView = findViewById(R.id.bottom_navigation);
@@ -84,6 +75,20 @@ public class MainActivity extends AppCompatActivity {
         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                 new HomeFragment()).commit();
         bottomNavigationView.setSelectedItemId(R.id.nav_home);
+
+
+        //network check
+        isNetworkConnected = NetworkHelper.hasNetwork(this);
+//        if (isNetworkConnected){
+//            Toast.makeText(getBaseContext(),"network connected",
+//                    Toast.LENGTH_SHORT).show();
+//        }
+//        else {
+//            Toast.makeText(getBaseContext(),"network is not connected",
+//                    Toast.LENGTH_SHORT).show();
+//        }
+
+
 
         //broadcast
         LocalBroadcastManager.getInstance(getApplicationContext())
@@ -96,7 +101,9 @@ public class MainActivity extends AppCompatActivity {
         textInputLayout.setEndIconOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String url = "http://192.168.88.250:44329/api/Items";
+                String url = "http://192.168.88.250:5001/api/items";
+                //String url = "https://10.0.2.2:5001/api/items";
+                //String url = "https://jsonplaceholder.typicode.com/todos/";
                 Intent intent = new Intent(MainActivity.this, MyService.class);
                 intent.setData(Uri.parse(url));
                 startService(intent);
@@ -113,19 +120,7 @@ public class MainActivity extends AppCompatActivity {
         return true;
     }
 
-    @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        //drawer btn stuff
-//        if (item != null && item.getItemId() == android.R.id.home) {
-        if (item.getItemId() == android.R.id.home) {
 
-            if (drawerLayout.isDrawerOpen(Gravity.RIGHT))
-                drawerLayout.closeDrawer(Gravity.RIGHT);
-            else
-                drawerLayout.openDrawer(Gravity.RIGHT);
-        }
-        return super.onOptionsItemSelected(item);
-    }
 
 
     //bottom nav item select
@@ -157,28 +152,7 @@ public class MainActivity extends AppCompatActivity {
     };
 
 
-    //side nav item selected
-    final private NavigationView.OnNavigationItemSelectedListener sideNavigationItemSelectedListener
-            = new NavigationView.OnNavigationItemSelectedListener() {
-        @Override
-        public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-            selectedFragment = new HomeFragment();
 
-            if (item.getItemId() == R.id.nav_about) {
-                selectedFragment = new AboutFragment();
-            } else if (item.getItemId() == R.id.nav_exit) {
-                Intent intent = new Intent(getBaseContext(), ItemActivity.class);
-                startActivity(intent);
-                return true;
-            }
-
-            drawerLayout.closeDrawers();
-            bottomNavigationView.getMenu().setGroupCheckable(0, false, true);
-            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                    selectedFragment).commit();
-            return true;
-        }
-    };
 
 
     private BroadcastReceiver broadcastReceiver = new BroadcastReceiver() {
@@ -205,6 +179,10 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+
+
+//                    Toast.makeText(getBaseContext(),"this works",
+//                    Toast.LENGTH_SHORT).show();
 
 
 //                OkHttpClient client = new OkHttpClient();
@@ -236,8 +214,7 @@ public class MainActivity extends AppCompatActivity {
 //                });
 
 
-//                    Toast.makeText(getBaseContext(),"this works",
-//                    Toast.LENGTH_SHORT).show();
+
 
 //        Button button = (Button) findViewById(R.id.button_1);
 //        button.setOnClickListener(new View.OnClickListener() {

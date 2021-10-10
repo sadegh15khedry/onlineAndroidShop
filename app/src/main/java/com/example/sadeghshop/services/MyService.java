@@ -9,6 +9,10 @@ import android.util.Log;
 import androidx.annotation.Nullable;
 import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 
+import com.example.sadeghshop.utils.HttpHelper;
+
+import java.io.IOException;
+
 public class MyService extends IntentService {
 
     public static final String TAG = "MyService";
@@ -24,9 +28,17 @@ public class MyService extends IntentService {
     protected void onHandleIntent(@Nullable Intent intent) {
         Uri uri = intent.getData();
         //Log.i(TAG,"working");
+        String response="";
+        try {
+            response =
+                    HttpHelper.downloadUrl(uri.toString());
+        } catch (Exception e) {
+            response = e.toString();
+        }
 
         Intent messageIntent = new Intent(MY_SERVICE_MESSAGE);
-        messageIntent.putExtra(MY_SERVICE_PAYLOAD,"service all done!!");
+        messageIntent.putExtra(MY_SERVICE_PAYLOAD, response);
+        Log.i(TAG,response);
         LocalBroadcastManager manager =
                 LocalBroadcastManager.getInstance(getApplicationContext());
         manager.sendBroadcast(messageIntent);
