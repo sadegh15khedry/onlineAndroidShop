@@ -10,11 +10,14 @@ import android.net.NetworkInfo;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.Toast;
 
 
@@ -33,6 +36,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 import com.google.android.material.navigation.NavigationView;
 import com.google.android.material.snackbar.Snackbar;
+import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 
 import java.io.IOException;
@@ -46,12 +50,11 @@ import okhttp3.Response;
 
 public class MainActivity extends AppCompatActivity {
 
-    private DrawerLayout drawerLayout;
-    private Fragment selectedFragment;
-    private BottomNavigationView bottomNavigationView;
     private boolean isNetworkConnected;
     //private boolean loggedIn = true;
     private boolean loggedIn = false;
+    private String searchValue;
+
 
     @RequiresApi(api = Build.VERSION_CODES.M)
     @Override
@@ -61,13 +64,13 @@ public class MainActivity extends AppCompatActivity {
 
 
         //setting our custom toolbar
-        Toolbar toolbar = findViewById(R.id.my_toolbar);
-        setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayShowTitleEnabled(false);
+//        Toolbar toolbar = findViewById(R.id.my_toolbar);
+//        setSupportActionBar(toolbar);
+//        getSupportActionBar().setDisplayShowTitleEnabled(false);
 
 
         //setting bottom navigation
-        bottomNavigationView = findViewById(R.id.bottom_navigation);
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
         bottomNavigationView.setOnItemSelectedListener(bottomNavigationItemSelectedListener);
 
 
@@ -79,15 +82,6 @@ public class MainActivity extends AppCompatActivity {
 
         //network check
         isNetworkConnected = NetworkHelper.hasNetwork(this);
-//        if (isNetworkConnected){
-//            Toast.makeText(getBaseContext(),"network connected",
-//                    Toast.LENGTH_SHORT).show();
-//        }
-//        else {
-//            Toast.makeText(getBaseContext(),"network is not connected",
-//                    Toast.LENGTH_SHORT).show();
-//        }
-
 
 
         //broadcast
@@ -96,17 +90,58 @@ public class MainActivity extends AppCompatActivity {
                         new IntentFilter(MyService.MY_SERVICE_MESSAGE));
 
 
-
         final TextInputLayout textInputLayout = findViewById(R.id.search_input_layout);
-        textInputLayout.setEndIconOnClickListener(new View.OnClickListener() {
+        textInputLayout.setStartIconOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String url = "http://192.168.88.250:5001/api/items";
-                //String url = "https://10.0.2.2:5001/api/items";
-                //String url = "https://jsonplaceholder.typicode.com/todos/";
-                Intent intent = new Intent(MainActivity.this, MyService.class);
-                intent.setData(Uri.parse(url));
-                startService(intent);
+//                String url = "http://192.168.88.250:5001/api/items";
+//                //String url = "https://10.0.2.2:5001/api/items";
+//                //String url = "https://jsonplaceholder.typicode.com/todos/";
+//                Intent intent = new Intent(MainActivity.this, MyService.class);
+//                intent.setData(Uri.parse(url));
+//                startService(intent);
+
+                Toast.makeText(getBaseContext(), searchValue,
+                        Toast.LENGTH_SHORT).show();
+
+            }
+        });
+
+
+        TextInputEditText searchEditText = findViewById(R.id.search_text_edit);
+        searchValue = searchEditText.getText().toString();
+        searchEditText.setHint(R.string.search_hint);
+        searchEditText.setHintTextColor(getResources().getColor(R.color.black));
+        searchEditText.setFocusableInTouchMode(true);
+
+        searchEditText.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+                searchValue = searchEditText.getText().toString();
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+
+            }
+        });
+
+        searchEditText.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            public void onFocusChange(View v, boolean hasFocus) {
+                if (hasFocus && searchValue.matches("")) {
+                    textInputLayout.setHint("");
+
+                }
+
+                if (searchValue.matches("")) {
+                    searchEditText.setHint(R.string.search_hint);
+                    //textInputLayout.setHint(R.string.search_hint);
+
+                }
 
             }
         });
@@ -115,18 +150,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        return true;
-    }
-
-
-
-
     //bottom nav item select
     final private BottomNavigationView.OnItemSelectedListener bottomNavigationItemSelectedListener = new BottomNavigationView.OnItemSelectedListener() {
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+            Fragment selectedFragment = null;
 
             if (item.getItemId() == R.id.nav_home) {
                 selectedFragment = new HomeFragment();
@@ -152,9 +180,6 @@ public class MainActivity extends AppCompatActivity {
     };
 
 
-
-
-
     private BroadcastReceiver broadcastReceiver = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
@@ -171,14 +196,9 @@ public class MainActivity extends AppCompatActivity {
         super.onDestroy();
 
         LocalBroadcastManager.getInstance(getApplicationContext())
-            .unregisterReceiver(broadcastReceiver);
+                .unregisterReceiver(broadcastReceiver);
     }
 }
-
-
-
-
-
 
 
 //                    Toast.makeText(getBaseContext(),"this works",
@@ -212,8 +232,6 @@ public class MainActivity extends AppCompatActivity {
 //
 //                    }
 //                });
-
-
 
 
 //        Button button = (Button) findViewById(R.id.button_1);
