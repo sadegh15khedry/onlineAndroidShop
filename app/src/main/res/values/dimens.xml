@@ -8,4 +8,5 @@
     <dimen name="heading_2">18sp</dimen>
     <dimen name="heading_3">15sp</dimen>
     <dimen name="signup_textedit_width">200dp</dimen>
+    <dimen name="normal_horizontal_layout_padding">10dp</dimen>
 </resources>
