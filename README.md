@@ -30,11 +30,11 @@ OnlineAndroidShop is an Android application designed for online shopping. It pro
 ## Screenshots
 
 ![photo_2024-03-19_14-42-57](https://github.com/sadegh15khedry/sadeghshop/assets/90490848/0d360327-2eef-4c6a-ab78-717f166cd05b)
-* Home section*
+*Home section*
 
 
 ![photo_2024-03-19_14-43-09](https://github.com/sadegh15khedry/sadeghshop/assets/90490848/2a06e8d7-c192-4559-8091-3c5a8fe4d30d)
-* Categories section*
+*Categories section*
 
 
 <!-- Add more screenshots as needed -->
