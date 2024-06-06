@@ -82,18 +82,17 @@ git clone https://github.com/sadegh15khedry/onlineAndroidShop.git
 
 ## Usage
 
-1. **Register/Login:**
-- If you're a new user, register with your email and password.
-- If you're an existing user, log in with your credentials.
+Here's how you can interact with the application:
 
-2. **Browse Products:**
-- Explore the list of available products.
+1. **Login/Signup:** You can access the login and signup pages to create a new account or log in to an existing account.
 
-3. **Add to Cart:**
-- Add desired products to your shopping cart.
+2. **Browse Sections:** Navigate through different sections of the application, such as the homepage, product categories, and user profile.
 
-4. **Checkout:**
-- Proceed to checkout to complete your purchase.
+3. **View Product Page:** Click on a product to view its details on the product page. Here, you can see information such as the product description, price, and availability.
+
+4. **View Profile Page:** Access your user profile page to view and manage your account information, including order history and saved addresses.
+
+Please note that while browsing and viewing functionalities are available, certain features such as adding products to the cart and checkout are still under development. 
 
 ## Contributing
 
