@@ -84,7 +84,7 @@ git clone https://github.com/sadegh15khedry/onlineAndroidShop.git
 
 Here's how you can interact with the application:
 
-1. **Login/Signup:** You can access the login and signup pages to create a new account or log in to an existing account.
+1. **Login/Signup:** You can access the login and signup pages.
 
 2. **Browse Sections:** Navigate through different sections of the application, such as the homepage, product categories, and user profile.
 
